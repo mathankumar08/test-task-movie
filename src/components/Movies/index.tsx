@@ -1,7 +1,14 @@
+
 function Movies() {
     return (
       <div className="movies">
-        MoviesPage
+        <div>My movies <button onClick={()=>{
+
+        }}>+</button></div>
+        
+        <div>
+          movie list wiht pagination
+        </div>
       </div>
     );
   }

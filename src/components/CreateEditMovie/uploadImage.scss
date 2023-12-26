@@ -1,0 +1,139 @@
+.dropbox-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+    width: 100%;
+
+    .dropzone {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 24px 0px;
+        gap: 16px;
+        // background: $background2;
+        border: 1px dashed grey;
+        border-radius: 8px;
+        width: 100%;
+        text-align: center;
+
+        &:hover {
+            background: lightblue;
+            border: 1px dashed blue;
+        }
+
+        .ph-file-arrow-up {
+            font-size: 42px;
+        }
+
+        .ph-folder-arrow-up,
+        .ph-file-zip,
+        .ph-files {
+            font-size: 42px;
+        }
+
+        .ph-arrow-left-back {
+            font-size: 20px;
+        }
+
+        .file-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+
+            .error-filename {
+                font-family: "Inter", sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                letter-spacing: 0.15px;
+                color: grey;
+                margin: unset;
+            }
+
+            .success-fileIcon {
+                color: blue;
+            }
+
+            .success-filename {
+                font-family: "Inter", sans-serif;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                letter-spacing: 0.15px;
+                color: blue;
+                margin: unset;
+            }
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0px;
+            gap: 8px;
+
+            .url-text-field {
+                width: 600px;
+                max-width: 600px;
+            }
+
+            .ph-link-icon {
+                font-size: 28px;
+            }
+
+            .ph-folder-yellow {
+                color: #ffca28;
+                font-size: 28px;
+                position: relative;
+                right: 8px;
+            }
+
+            .ph-link-url-size {
+                font-size: 28px;
+                color: #303437;
+                position: relative;
+                right: 8px;
+            }
+
+            .url-link-heading {
+                color: #30313f;
+                line-height: 24px;
+                letter-spacing: 0.15px;
+            }
+
+            .content {
+                font-family: "Inter", sans-serif;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 20px;
+                letter-spacing: 0.15px;
+                color: black;
+                margin: unset;
+            }
+        }
+    }
+
+    .excel-error {
+        border: 2px solid;
+    }
+
+    .dropzone.active {
+        background: lightblue;
+        border: 1px dashed blue;
+    }
+
+    .dropzone.error {
+        background: white;
+        border: 1.5px solid red;
+    }
+
+    .dropzone.success {
+        background: white;
+        border: 1.5px solid green;
+    }
+
+}
