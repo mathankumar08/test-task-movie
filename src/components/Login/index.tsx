@@ -6,6 +6,7 @@ import ActionButton from "../../common/ActionButton";
 import "./styles.css";
 import { login } from "../../services/loginService";
 import { useUserContext } from "../../context/userContext";
+import { useNavigate } from "react-router-dom";
 
 type loginForm = {
   email: string,
@@ -18,6 +19,7 @@ export const DefaultLogin: loginForm = {
 }
 
 function Login() {
+  const navigate = useNavigate()
   const { setIsAuthenticated } : any= useUserContext()
 
   const methods = useForm({
@@ -28,6 +30,7 @@ function Login() {
     const getlogindetails = await login(data)
     localStorage.setItem("token", getlogindetails)
     setIsAuthenticated(getlogindetails)
+    navigate("/movie")
   }
 
   return (
