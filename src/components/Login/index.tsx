@@ -4,28 +4,30 @@ import Input from "../../common/Input";
 import { Checkbox, FormControlLabel } from "@mui/material";
 import ActionButton from "../../common/ActionButton";
 import "./styles.css";
+import { login } from "../../services/loginService";
+import { useUserContext } from "../../context/userContext";
 
 type loginForm = {
   email: string,
   password: string,
 }
 
-export const DefaultLogin: any = {
+export const DefaultLogin: loginForm = {
   email: "",
   password: "",
 }
 
 function Login() {
-
-  const [formData, setFormData] = useState<loginForm>()
+  const { setIsAuthenticated } : any= useUserContext()
 
   const methods = useForm({
     defaultValues: DefaultLogin
   })
 
-  const handleSubmit = (data: any) => {
-    // setFormData({ ...formData, addressAndContact: data })
-    console.log("data", data)
+  const handleSubmit = async(data: any) => {
+    const getlogindetails = await login(data)
+    localStorage.setItem("token", getlogindetails)
+    setIsAuthenticated(getlogindetails)
   }
 
   return (

@@ -3,7 +3,7 @@ import { UserContext } from './context/userContext';
 import Router from './routes';
 
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false)
+  const [isAuthenticated, setIsAuthenticated] = useState("")
   return (
     <UserContext.Provider value={{ isAuthenticated, setIsAuthenticated }}>
       <Router />
