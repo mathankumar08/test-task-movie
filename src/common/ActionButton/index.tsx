@@ -3,13 +3,12 @@ import "./styles.css";
 
 
 type TActionButtonProps = {
-  varient: string,
   text: string,
   onClick?:any,
   ref?:any,
 } & React.ButtonHTMLAttributes<HTMLButtonElement>
 
-const ActionButton: React.FC<TActionButtonProps> = ({varient, text, onClick,ref, ...props }) => {
+const ActionButton: React.FC<TActionButtonProps> = ({ text, onClick,ref, ...props }) => {
 
   const clickHandler = (): void => {
     if (onClick) onClick();

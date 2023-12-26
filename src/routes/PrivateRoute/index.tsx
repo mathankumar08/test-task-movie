@@ -1,3 +1,4 @@
+import React from "react";
 import { Navigate, Outlet, Route } from "react-router-dom";
 import { paths } from "../constant";
 

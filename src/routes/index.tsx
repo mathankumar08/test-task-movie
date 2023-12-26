@@ -1,9 +1,12 @@
+
+import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import LoginPage from '../pages/Login';
 import PrivateRoute from './PrivateRoute';
 import MoviesPage from '../pages/Movies';
 import PublicRoute from './PublicRoute';
 import { useContext } from 'react';
+
 
 function Router() {
     const isAuthenticated = false
